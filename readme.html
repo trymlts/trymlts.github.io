@@ -1,0 +1,28 @@
+<h1 id="trymlts">TryMLTS</h1>
+<p>A web app designed to try and play with the MLTS programming language. Source is hosted on <a href="https://github.com/trymlts/trymlts">GitHub</a> as is the <a href="https://trymlts.github.io/">demo</a>.</p>
+<h2 id="known-issues-and-missing-features">Known issues and missing features</h2>
+<p>This work is highly experimental and you should expect bugs to appear. If so please report them on the <a href="https://github.com/voodoos/mlts/issues">issue tracker</a>.</p>
+<ul>
+<li>There is no syntactic sugar for non-empty lists. Use <code>a::b::c::[]</code> instead of <code>[a;b;c]</code>.</li>
+<li>Error messages are not always meaningfull of even shown.</li>
+</ul>
+<h2 id="concrete-syntax">Concrete syntax</h2>
+<p>MLTS concrete syntax is based on OCaml. A program written in MLTS not using the new constructs <code>nab in</code>, <code>new in</code>, <code>\</code> and <code>=&gt;</code> should compile with the <code>ocamlc</code> compiler.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Our protoype interpreter for MLTS is written in λProlog. When you press the &quot;Run&quot; button the MLTS concrete syntax is transpilled to it's λProlog counterpart and <a href="https://github.com/LPCIC/elpi">Elpi</a>, an embeddable λProlog interpreter written in OCaml, runs it.</p>
+<p>All this happens locally in your browser thanks to the js_of_ocaml <a href="https://github.com/ocsigen/js_of_ocaml">js_of_ocaml</a>.</p>
+<h2 id="build-dependencies">Build dependencies</h2>
+<p>Before attempting to build the project you should make sure that you have the following dependencies installed :</p>
+<ul>
+<li><p><a href="https://opam.ocaml.org/doc/Install.html">Opam</a> :</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://raw.github.com/ocaml/opam/master/shell/opam_installer.sh -O - <span class="kw">|</span> <span class="fu">sh</span> -s /usr/local/bin</code></pre></div></li>
+<li><p><a href="https://caml.inria.fr/">OCaml</a> 4.06.0 :</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">opam</span> switch install 4.06.0</code></pre></div></li>
+<li><p><a href="http://gallium.inria.fr/~fpottier/menhir/">Menhir</a>, <a href="https://github.com/ocsigen/js_of_ocaml">js_of_ocaml</a>, <a href="https://github.com/mirage/ocaml-base64">base64</a> :</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">opam</span> install menhir js_of_ocaml js_of_ocaml-ppx base64</code></pre></div></li>
+<li><p><a href="https://github.com/LPCIC/elpi">Elpi</a> :</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">opam</span> pin add elpi https://github.com/LPCIC/elpi.git</code></pre></div></li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>The &quot;backend&quot; is powered by OCaml, λProlog, Elpi and js_of_ocaml.</p>
+<p>The frontend uses a standard mix of Bootsrap and Jquery but also the Ace code editor, highlight-js for additionnal syntactic coloring and open-iconic for icons.</p>
