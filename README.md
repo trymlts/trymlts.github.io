@@ -1,13 +1,15 @@
 # TryMLTS
 A web app designed to try and play with the MLTS programming language.
-Source is hosted on [GitHub](https://github.com/trymlts/trymlts.github.io/) as is the [demo](https://trymlts.github.io).
+Source is hosted on [GitHub](https://github.com/trymlts/trymlts.github.io/){ target="_blank" } as is the [demo](https://trymlts.github.io){ target="_blank" }.
+
+A draft of a **paper** describing MLTS can be found [here](./mlts_draft.pdf){ target="_blank" }.
 
 
 ## The λProlog interpreter
-Our prototype interpreter is written in λProlog. Its source is located in the [lib/data/core folder](https://github.com/trymlts/trymlts.github.io/tree/master/lib/data/core). The more interesting parts are:
+Our prototype interpreter is written in λProlog. Its source is located in the [lib/data/core folder](https://github.com/trymlts/trymlts.github.io/tree/master/lib/data/core){ target="_blank" }. The more interesting parts are:
 
-- The [type checking algorithm](https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/typing.mod) 
-- The [evaluation algorithm](https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/eval.mod)
+- The [type checking algorithm](https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/typing.mod){ target="_blank" } 
+- The [evaluation algorithm](https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/eval.mod){ target="_blank" }
 
 ## Known issues and missing features
 This work is highly experimental and you should expect bugs to appear.
@@ -51,9 +53,9 @@ MLTS concrete syntax is based on OCaml. A program written in MLTS not using the 
     of the rule).
 
 ## How it works
-Our protoype interpreter for MLTS is written in λProlog. When you press the "Run" button the MLTS concrete syntax is transpilled to it's λProlog counterpart and [Elpi](https://github.com/LPCIC/elpi), an embeddable λProlog interpreter written in OCaml, runs it.
+Our protoype interpreter for MLTS is written in λProlog. When you press the "Run" button the MLTS concrete syntax is transpilled to it's λProlog counterpart and [Elpi](https://github.com/LPCIC/elpi){ target="_blank" }, an embeddable λProlog interpreter written in OCaml, runs it.
 
-All this happens locally in your browser thanks to the js_of_ocaml [js_of_ocaml](https://github.com/ocsigen/js_of_ocaml).
+All this happens locally in your browser thanks to the js_of_ocaml [js_of_ocaml](https://github.com/ocsigen/js_of_ocaml){ target="_blank" }.
 
 ## Build dependencies
 [TODO : does not work as-is on a fresh install] Before attempting to build the project you should make sure that you have the following dependencies installed :

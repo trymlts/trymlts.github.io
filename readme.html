@@ -1,10 +1,11 @@
 <h1 id="trymlts">TryMLTS</h1>
-<p>A web app designed to try and play with the MLTS programming language. Source is hosted on <a href="https://github.com/trymlts/trymlts.github.io/">GitHub</a> as is the <a href="https://trymlts.github.io">demo</a>.</p>
+<p>A web app designed to try and play with the MLTS programming language. Source is hosted on <a href="https://github.com/trymlts/trymlts.github.io/" target="_blank">GitHub</a> as is the <a href="https://trymlts.github.io" target="_blank">demo</a>.</p>
+<p>A draft of a <strong>paper</strong> describing MLTS can be found <a href="./mlts_draft.pdf" target="_blank">here</a>.</p>
 <h2 id="the-λprolog-interpreter">The λProlog interpreter</h2>
-<p>Our prototype interpreter is written in λProlog. Its source is located in the <a href="https://github.com/trymlts/trymlts.github.io/tree/master/lib/data/core">lib/data/core folder</a>. The more interesting parts are:</p>
+<p>Our prototype interpreter is written in λProlog. Its source is located in the <a href="https://github.com/trymlts/trymlts.github.io/tree/master/lib/data/core" target="_blank">lib/data/core folder</a>. The more interesting parts are:</p>
 <ul>
-<li>The <a href="https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/typing.mod">type checking algorithm</a></li>
-<li>The <a href="https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/eval.mod">evaluation algorithm</a></li>
+<li>The <a href="https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/typing.mod" target="_blank">type checking algorithm</a></li>
+<li>The <a href="https://github.com/trymlts/trymlts.github.io/blob/master/lib/data/core/eval.mod" target="_blank">evaluation algorithm</a></li>
 </ul>
 <h2 id="known-issues-and-missing-features">Known issues and missing features</h2>
 <p>This work is highly experimental and you should expect bugs to appear.</p>
@@ -23,8 +24,8 @@
 <li><p>Rules within match-expression can also contain the <code>nab X in rule</code> binder: in the scope of this binder, the symbol <code>X</code> can match existing nominals introduced by the <code>new</code> binder and the <code>\</code> operator. Note that <code>X</code> is bound over the entire rule (including both the left and right-side of the rule).</p></li>
 </ul>
 <h2 id="how-it-works">How it works</h2>
-<p>Our protoype interpreter for MLTS is written in λProlog. When you press the &quot;Run&quot; button the MLTS concrete syntax is transpilled to it's λProlog counterpart and <a href="https://github.com/LPCIC/elpi">Elpi</a>, an embeddable λProlog interpreter written in OCaml, runs it.</p>
-<p>All this happens locally in your browser thanks to the js_of_ocaml <a href="https://github.com/ocsigen/js_of_ocaml">js_of_ocaml</a>.</p>
+<p>Our protoype interpreter for MLTS is written in λProlog. When you press the &quot;Run&quot; button the MLTS concrete syntax is transpilled to it's λProlog counterpart and <a href="https://github.com/LPCIC/elpi" target="_blank">Elpi</a>, an embeddable λProlog interpreter written in OCaml, runs it.</p>
+<p>All this happens locally in your browser thanks to the js_of_ocaml <a href="https://github.com/ocsigen/js_of_ocaml" target="_blank">js_of_ocaml</a>.</p>
 <h2 id="build-dependencies">Build dependencies</h2>
 <p>[TODO : does not work as-is on a fresh install] Before attempting to build the project you should make sure that you have the following dependencies installed :</p>
 <ul>
