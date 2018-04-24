@@ -66,6 +66,7 @@ matching Val (R::Rs) V :- applymatch [] [] Val R V    ; matching Val Rs V.
 applymatch Ns Vs Exp (all   R) V :- sigma X\ applymatch Ns (arity0 X::Vs) Exp (R X) V.
 applymatch Ns Vs Exp (all'  R) V :- sigma X\ applymatch Ns (arity1 X::Vs) Exp (R X) V.
 applymatch Ns Vs Exp (all'' R) V :- sigma X\ applymatch Ns (arity2 X::Vs) Exp (R X) V.
+applymatch Ns Vs Exp (nab x\R) V :- !, pi x\    applymatch Ns Vs Exp R V. % Ignore if vacuous
 applymatch Ns Vs Exp (nab   R) V :- pi x\    applymatch [(copy N x)|Ns] Vs Exp (R x) V.
 applymatch Ns Vs Exp (Exp' ==> Result) V :-
   ((pi N\ pi X\ (copy N X) :- member (copy N X) Ns) => (pi N\ copy N N :- nom N) => (copy Exp Exp')),
